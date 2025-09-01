@@ -39,7 +39,7 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="bg-white dark:bg-gray-800 shadow-md w-full">
+        <nav className="bg-white dark:bg-gray-900 shadow-md w-full slab">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
@@ -66,7 +66,7 @@ const Navbar = () => {
                         </button>
 
                         {/* Tooltip */}
-                        <span className="absolute font-semibold -bottom-8 left-1/2 transform -translate-x-1/2 text-xs px-2 py-1 rounded bg-black text-white opacity-0 group-hover:opacity-100 transition flex whitespace-nowrap">
+                        <span className="dosis absolute font-semibold -bottom-8 left-1/2 transform -translate-x-1/2 text-xs px-2 py-1 rounded bg-black text-white opacity-0 group-hover:opacity-100 transition flex whitespace-nowrap">
                             {theme === "light" ? "Light Mode" : "Dark Mode"}
                         </span>
                     </div>
