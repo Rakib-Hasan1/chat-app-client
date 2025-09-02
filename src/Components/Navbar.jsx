@@ -4,9 +4,19 @@ import { Sun, Moon } from "lucide-react";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
     useEffect(() => {
+        localStorage.getItem("theme");
+        if (!localStorage.getItem("theme")) {
+            localStorage.setItem("theme", theme);
+        }
+        else {
+            localStorage.setItem("theme", theme);
+        }
+        // console.log(theme);
+
+
         if (theme === "dark") {
             document.documentElement.classList.add("dark");
         } else {
@@ -39,7 +49,7 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="bg-white dark:bg-gray-900 shadow-md w-full slab">
+        <nav className="bg-gray-100 dark:bg-gray-800 shadow w-full slab">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}

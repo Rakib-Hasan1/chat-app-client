@@ -14,7 +14,7 @@ function HomePage() {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className="dosis flex min-h-screen transition-colors duration-300 bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+    <div className="dosis flex min-h-screen transition-colors duration-300 bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-white">
       {/* Left Section - Lottie */}
       <div className="w-2/3 hidden md:flex items-center justify-center dark:from-gray-800 dark:to-gray-700">
         <DotLottieReact
@@ -41,7 +41,7 @@ function HomePage() {
                   type="text"
                   {...register("name", { required: !isLogin })}
                   placeholder="Enter your name"
-                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none dark:bg-gray-800"
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none dark:bg-gray-800 dark:placeholder:text-gray-300 placeholder:text-gray-500"
                 />
                 {errors.name && (
                   <span className="text-red-500 text-sm">Name is required</span>
@@ -56,7 +56,7 @@ function HomePage() {
                 type="email"
                 {...register("email", { required: "Email is required" })}
                 placeholder="Enter your email"
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none dark:bg-gray-800"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none dark:bg-gray-800 dark:placeholder:text-gray-300 placeholder:text-gray-500"
               />
               {errors.email && (
                 <span className="text-red-500 text-sm">
@@ -75,7 +75,7 @@ function HomePage() {
                   minLength: { value: 6, message: "Min 6 characters" },
                 })}
                 placeholder="Enter your password"
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none dark:bg-gray-800"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 outline-none dark:bg-gray-800 dark:placeholder:text-gray-300 placeholder:text-gray-500"
               />
               {errors.password && (
                 <span className="text-red-500 text-sm">
