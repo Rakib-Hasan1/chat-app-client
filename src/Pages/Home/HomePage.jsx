@@ -14,7 +14,7 @@ function HomePage() {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className="dosis flex min-h-screen transition-colors duration-300 bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-white">
+    <div className="dosis flex flex-row-reverse min-h-screen transition-colors duration-300 bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-white">
       {/* Left Section - Lottie */}
       <div className="w-2/3 hidden md:flex items-center justify-center dark:from-gray-800 dark:to-gray-700">
         <DotLottieReact
