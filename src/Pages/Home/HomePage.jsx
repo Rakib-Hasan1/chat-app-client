@@ -14,7 +14,7 @@ function HomePage() {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className="dosis flex flex-row-reverse min-h-screen transition-colors duration-300 bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-white">
+    <div className="dosis px-0 md:px-4 lg:px-8 flex flex-row-reverse min-h-screen transition-colors duration-300 bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-white">
       {/* Left Section - Lottie */}
       <div className="w-2/3 hidden md:flex items-center justify-center dark:from-gray-800 dark:to-gray-700">
         <DotLottieReact
@@ -35,6 +35,7 @@ function HomePage() {
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
             {/* Name (only for Register) */}
             {!isLogin && (
+             <>
               <div>
                 <label className="block text-sm font-medium mb-1">Name</label>
                 <input
@@ -47,6 +48,7 @@ function HomePage() {
                   <span className="text-red-500 text-sm">Name is required</span>
                 )}
               </div>
+             </>
             )}
 
             {/* Email */}
@@ -87,7 +89,7 @@ function HomePage() {
             {/* Submit */}
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition"
+              className="w-full bg-blue-600 hover:bg-blue-700 cursor-pointer text-white py-2 rounded-lg font-semibold transition"
             >
               {isLogin ? "Login" : "Register"}
             </button>
@@ -98,7 +100,7 @@ function HomePage() {
             {isLogin ? "Don’t have an account?" : "Already have an account?"}{" "}
             <button
               onClick={() => setIsLogin(!isLogin)}
-              className="text-blue-600 hover:underline font-medium"
+              className="text-blue-600 hover:underline cursor-pointer font-medium"
             >
               {isLogin ? "Register" : "Login"}
             </button>
