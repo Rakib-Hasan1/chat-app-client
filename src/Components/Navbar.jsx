@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link, NavLink } from "react-router";
 import { Sun, Moon } from "lucide-react";
+import { AuthContext } from "../Contexts/AuthContext/AuthContext";
 
 const Navbar = () => {
+    const auhtInfo = useContext(AuthContext);
+    console.log(auhtInfo?.name);
     const [isOpen, setIsOpen] = useState(false);
     const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
@@ -79,6 +82,9 @@ const Navbar = () => {
                         <span className="dosis absolute font-semibold -bottom-8 left-1/2 transform -translate-x-1/2 text-xs px-2 py-1 rounded bg-black text-white opacity-0 group-hover:opacity-100 transition flex whitespace-nowrap">
                             {theme === "light" ? "Light Mode" : "Dark Mode"}
                         </span>
+                    </div>
+                    <div>
+                        <h2>Name: {auhtInfo?.name}</h2>
                     </div>
 
                     {/* Mobile Hamburger */}
